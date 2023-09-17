@@ -26,3 +26,14 @@ void print_triangle(int leftCol, int size)
   }
 }
 
+/* Prints an arrow of a specified height by taking advantage
+ * of the triangle and square already in place */
+void print_arrow(int leftCol, int size)
+{
+  int square_offset = size/2 + leftCol;
+  if (size % 2 == 1)
+    square_offset++;
+  print_triangle(leftCol, size);
+  print_square(square_offset, size);
+}
+
